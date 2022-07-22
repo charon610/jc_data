@@ -1,0 +1,36 @@
+<!-- 자바스크립트에서 DOM을 통해 문서의 구조 스타일 그리고 내용 변경할 수 있음 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 이해하기</title>
+</head>
+<body>
+    <div id = "div1">hello DOM</div>
+    <ol>
+        <li>list item1</li>
+        <li>list item2</li>
+    </ol>
+    <script>
+        const div1E1 = document.getElementById('div1');
+        console.log(div1E1.innerHTML);
+        console.log(div1E1.nodeType === Node.ELEMENT_NODE);
+        console.log(div1E1 instanceof HTMLDivElement);
+        console.log(div1E1 instanceof HTMLElement);
+        console.log(div1E1 instanceof Element);
+        console.log(div1E1 instanceof Node);
+        console.log(Element.prototype);
+        console.log(div1E1.tagName);
+
+        const div1E2 = document.querySelector('#div1');
+
+        console.log(div1E2.innerHTML);
+        
+        const liEls =  document.querySelectorAll('ul li');
+        console.log(liEls.item(0).innerHTML);
+        console.log(liEls.item(1).textContent);
+    </script>
+</body>
+</html>
